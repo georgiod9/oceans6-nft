@@ -1,0 +1,11 @@
+@import "custom.scss";
+
+.App{
+  background: url("../src/assets/images/bestone.gif");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
+}

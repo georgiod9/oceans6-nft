@@ -1,0 +1,38 @@
+{
+  "name": "blockend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "launch-devnet": "ganache-cli -a 10 -e 1000 --acctKeys devnet-accounts.json -m \"olive cook review chalk discover sample vessel vast soul turkey cigar moment\"",
+    "launch-devnet1": "ganache-cli -a 10 -e 1000 --acctKeys devnet-accounts.json -m \"hollow behind consider mirror hundred grunt treat glue caught raccoon raw piece\"",
+    "launch-devnet2": "ganache-cli -a 10 -e 1000 --acctKeys devnet-accounts.json -m \"lottery electric syrup artwork live alarm arrive odor puzzle smile post tip\"",
+    "compile-all": "truffle compile --all",
+    "compile-all-clean": "rm -rf ../frontned/src/abi && truffle compile --all",
+    "compile-all-clean1": "del -f \"../frontend/src/abi\" && truffle compile --all",
+    "deploy-devnet": "truffle migrate --network development --compile-none",
+    "deploy-devnet-reset": "truffle migrate --network development --reset",
+    "deploy-rinkeby": "truffle migrate --network rinkeby --compile-none",
+    "deploy-rinkeby-reset": "truffle migrate --network rinkeby --compile-none --reset",
+    "deploy-mainnet": "truffle migrate --network mainnet --compile-none",
+    "adminMint-devnet": "truffle exec scripts/adminMint.js --network development",
+    "merkleTree-devnet": "truffle exec scripts/generateMerkleRoot.js --network development",
+    "merkleTree-rinkeby": "truffle exec scripts/generateMerkleRoot.js --network rinkeby",
+    "merkleTree-mainnet": "truffle exec scripts/generateMerkleRoot.js --network mainnet",
+    "test": "truffle test",
+    "verify-rinkeby": "truffle run verify --network rinkeby",
+    "verify-mainnet": "truffle run verify --network mainnet"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.5.0",
+    "@truffle/hdwallet-provider": "^2.0.3",
+    "chai": "^4.3.6",
+    "chai-as-promised": "^7.1.1",
+    "ethers": "^5.6.1",
+    "keccak256": "^1.0.6",
+    "merkletreejs": "^0.2.31",
+    "truffle-plugin-verify": "^0.5.24"
+  }
+}

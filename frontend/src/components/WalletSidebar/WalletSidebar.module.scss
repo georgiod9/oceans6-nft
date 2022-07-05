@@ -1,0 +1,33 @@
+.walletContent {
+  -webkit-box-shadow: 0px 3px 10px -3px #000000;
+  box-shadow: 0px 3px 10px -3px #000000;
+}
+
+.menuItemText {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.menuDivision {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.menuDivision p {
+  font-size: 14px;
+  color: black;
+}
+
+.sidebarHeading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.sidebarHeadingUserCircle {
+  padding-right: 8px;
+  width: 32px;
+}

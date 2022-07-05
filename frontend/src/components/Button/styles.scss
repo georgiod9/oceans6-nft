@@ -1,0 +1,14 @@
+.navbar-nav {
+  .connect-btn {
+    position: relative;
+    right: 30px;
+
+    @media (max-width: 991px) {
+      width: 100px !important;
+      right: 5px;
+      font-family: 'Karla', sans-serif;  
+      font-weight: bold;
+      font-size: 13px !important;
+    }
+  }
+}

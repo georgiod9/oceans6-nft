@@ -1,0 +1,23 @@
+  .ComingSoonFont{
+    font-family: 'Karla', sans-serif; 
+    font-size: 6rem;
+    color: #f2f2f2;
+    text-align: center;
+
+    @media(max-width: 575px) {
+      font-size: 3rem;
+    }
+  }
+
+  .nftComingSoonCol{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  
+    @media(min-width: 992px) and (max-width: 1199px){
+      margin-top: 1rem;
+    }
+  }
+
+  

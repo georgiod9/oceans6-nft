@@ -1,0 +1,38 @@
+.modalTemplateWrapper {
+  background-color: #03befc;
+}
+
+.modalTemplateHeading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.modalTemplateHeadingText {
+  font-family: 'Karla', sans-serif;  
+  color: #fff;
+  padding: 0 !important;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.modalTemplateHeadingClose {
+  font-family: 'Karla', sans-serif;  
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalTemplateHeadingBox {
+  width: 32px;
+  height: 32px;
+}

@@ -1,0 +1,266 @@
+
+.mintingPageParagraphStyle{
+    color: #000000;
+    font-family: 'Karla', sans-serif; 
+    text-align: center;
+  }
+  
+  .mintingPageTitleStyle{
+    color: #000000;
+    font-family: 'Karla', sans-serif; 
+    text-align: center;
+  }
+  
+  .mintingPageSubTitleStyle{
+    color: #000000;
+    font-family: 'Quattrocento Sans', sans-serif;
+    text-align: center;
+  }
+  
+  .nftPosterCol{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: auto auto;
+  
+    @media(min-width: 992px) and (max-width: 1199px){
+      margin-top: 10rem;
+    }
+    //width: 100%;
+  }
+
+  
+  .mintingPagePositioning{
+    //margin: 100px 150px 0px 50px;
+    padding-inline: 5%;
+  
+    @media (max-width: 768px ){
+      padding-inline: 10%;
+  
+    }
+    padding-block:32px ;
+  }
+
+  .flex-text-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    
+  }
+  
+  .oceanSixMintingPagePriceButton{
+    width: 100%;
+    height: 100px;
+    margin-bottom: 5px;
+    background: rgba(195, 202, 206, 0);
+    color: #000000;
+    border: none;
+    border-radius: 10px 0px 0px 0px;
+    font-family: 'Karla', sans-serif; 
+  }
+  
+  .oceanSixMintingPageAvailableButton{
+    width: 100%;
+    height: 100px;
+    background: rgba(195, 202, 206, 0);
+    color: #000000;
+    border: none;
+    border-radius: 0px 10px 0px 0px;
+    font-family: 'Karla', sans-serif; 
+  }
+  
+  .oceanSixMintingPageTitleButton{
+    width: 100%;
+    height: 100px;
+    background: rgba(195, 202, 206, 0);
+    color: #000000;
+    border: none;
+    border-radius: 0px 0px 0px 10px;
+    font-family: 'Karla', sans-serif; 
+  }
+  
+  .oceanSixMintingPageTitle2Button{
+    width: 100%;
+    height: 100px;
+    background: rgba(195, 202, 206, 0);
+    border: none;
+    border-radius: 0px 0px 10px 0px;
+    font-family: 'Karla', sans-serif; 
+  }
+
+  .oceanSixMintingPagePriceButton:hover{
+    background: rgba(195, 202, 206, 0.2);
+  }
+  
+  .oceanSixMintingPageAvailableButton:hover{
+    background: rgba(195, 202, 206, 0.2);
+  }
+  
+  .oceanSixMintingPageTitleButton:hover{
+    background: rgba(195, 202, 206, 0.2);
+  }
+  
+  .oceanSixMintingPageTitle2Button:hover{
+    background: rgba(195, 202, 206, 0.2);
+  }
+  
+  .columnPositioning2{
+    padding-left: 0px;
+  }
+  
+  .columnPositioning1{
+    padding-right: 5px;
+  }
+  
+  .containerButtons{
+    padding: 0px;
+  }
+  .connectWalletBtn{
+    width: 100%;
+    margin-top: 40px;
+    font-family: 'Karla', sans-serif; 
+  }
+  
+  .footerContainer{
+    margin: 80px 0px 0px 0px;
+  }
+  
+  .positioning{
+    margin-top: 70px;
+    align-content: center;
+  }
+  
+  .mint-count {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .amount {
+      padding: 5px 15px;
+      font-family: 'Karla', sans-serif; 
+      font-size: 22px;
+      // color: #161616;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      width: 50px;
+      user-select: none;
+      // background-image: linear-gradient(211deg, #834f16, #d6b99b 51%, #c09b76);
+    }
+  
+    .arrow-left {
+      width: 40px;
+      background: transparent;
+      height: 40px;
+      font-size: 10px;
+      cursor: pointer;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      color: rgb(0, 0, 0);
+      padding: 0 10px;
+      svg {
+        width: 16px;
+      }
+    }
+  
+    .arrow-right {
+      width: 40px;
+      background: transparent;
+      height: 40px;
+      font-size: 10px;
+      cursor: pointer;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      color: rgb(0, 0, 0);
+      padding: 0 10px;
+      svg {
+        width: 16px;
+      }
+    }
+  }
+  
+  .oceanSixDuePaymentButton{
+    width: 100%;
+    height: 100px;
+    background: rgba(195, 202, 206, 0);
+    border: none;
+    font-family: 'Karla', sans-serif; 
+  }
+  .oceanSixDuePaymentButton:hover{
+    background: rgba(195, 202, 206, 0.2); 
+  }
+
+  .glass {
+    background-image: url("../../assets/images/card-01.png");
+    background-size: auto fit-content;
+    background-position: center;
+    margin: auto;
+    padding: 10vh 10vw;
+    background-repeat: no-repeat;
+    width: fit-content;
+  }
+
+  .glass-box {
+    background-color: rgba(243, 242, 242, 0.959);
+    border: 1px solid white;
+    border-radius: 30px;
+    backdrop-filter: blur(20px);
+
+    width: max-content;
+    height: max-content;
+    padding: 20px 20px;
+    margin-top: 30px;
+  }
+
+  .zindex-1 {
+    z-index: 999;
+  }
+  
+  .glass_card {
+    z-index: -1;
+    display: absolute;
+    top: 0;
+  }
+
+  
+  .cont {
+    margin: auto auto;
+  }
+
+  .grid-gap {
+    grid-gap: 20px;
+  }
+
+  .absolute {
+    position: absolute;
+  }
+  .relative {
+    position: relative;
+  }
+
+  .bubble-s {
+    width: 50px;
+    z-index: -10;
+  }
+
+  .z1 {
+    z-index: 1;
+  }
+
+  .z2 {
+    z-index: 2;
+  }
+
+  .z3 {
+    z-index: 3;
+    top: 50px;
+  }
+
+  

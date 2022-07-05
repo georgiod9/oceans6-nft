@@ -1,0 +1,137 @@
+.purchaseModalWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 500px;
+  background-color: #03a5fc;
+}
+
+.modalTemplateWrapper {
+  background-color: #03a5fc;
+}
+
+.purchaseModalCollectionWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 15px;
+  margin-bottom: 20px;
+}
+
+.purchaseModalWrapper h6 {
+  color: #fff;
+}
+
+.purchaseModalWrapper h5 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px !important;
+}
+
+.purchaseModalCollectionWrapper h5 {
+  color: white;
+}
+
+.purchaseModalCollectionWrapper h6 {
+  color: #157ffc;
+  text-transform: uppercase;
+}
+
+.purchaseModalTable {
+  color: white;
+  border: #444444 solid 2px;
+  border-radius: 16px;
+  overflow: hidden;
+  max-width: 450px;
+}
+
+.purchaseModalTableUpperRow {
+  border-bottom: #444444 solid 2px;
+}
+
+.purchaseModalTableCol {
+  padding: 5px 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  img {
+    width: 18px;
+    margin-left: 15px;
+  }
+}
+
+.purchaseModalTableCol p {
+  margin: 0 !important;
+  padding: 10px 20px;
+}
+
+.purchaseModalShare {
+  font-family: 'Karla', sans-serif;  
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h5 {
+    margin: 20px 0;
+  }
+}
+
+.purchaseModalShareIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.purchaseModalTableColHeaderText {
+  text-align: start;
+  font-weight: 700;
+}
+
+.purchaseModalShareIcon {
+  margin: 0 16px;
+  cursor: pointer;
+}
+
+.purchaseModalTransactionHash {
+  color: #157ffc;
+  a {
+    text-decoration: none;
+  }
+}
+.purchaseModalHeaderStatement {
+  padding-bottom: 8px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.MintingRollingImageBlur {
+  width: 50%;
+  filter: blur(4px);
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+}
+
+.MintingRollingImage {
+  width: 50%;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+}
+
+.modal-content {
+  box-shadow: 2px 2px 40px 0px rgba(255, 255, 255, 0.75);
+}
+
+.modal-header {
+  border-bottom: 1px solid rgba(136, 158, 168, 0.2) !important;
+}

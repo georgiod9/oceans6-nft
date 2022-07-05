@@ -1,0 +1,13 @@
+.connectWalletBtn{
+    width: 50%;
+    margin-top: 40px;
+    font-family: 'Karla', sans-serif;  
+    margin-left: 8rem;
+
+    @media(max-width: 1200px){
+        margin-left: 6rem;
+    }
+    @media(max-width: 991px){
+        margin-left: 10rem;
+    }
+}
