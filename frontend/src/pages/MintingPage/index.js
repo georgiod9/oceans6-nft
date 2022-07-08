@@ -1,26 +1,31 @@
-import {Button, Col, Container, Row} from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import NFTPoster from "../../components/NFTPoster";
 import Bubble from "../../components/Bubble";
 
 import "./styles.scss";
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Footer from "../../components/Footer";
 import ConnectButtonWallet from "../../components/ConnectWalletButton";
-import {useEthers, useGasPrice} from "@usedapp/core";
-import {GetMintPerUser, GetMintPrice, GetPhase, GetMintingLimit, TotalSupply, useOceanSix721Method} from "../../hooks/dapp/useOceanSix721";
+import { useEthers, useGasPrice } from "@usedapp/core";
+import { GetMintPerUser, GetMintPrice, GetPhase, GetMintingLimit, TotalSupply, useOceanSix721Method } from "../../hooks/dapp/useOceanSix721";
 import {
     FaChevronLeft,
     FaChevronRight,
 } from "react-icons/fa";
-  
+
 
 import MintingModal from "../../components/MintingModal";
 import keccak256 from "keccak256";
-import {utils as eUtils} from "ethers/lib/ethers";
+import { utils as eUtils } from "ethers/lib/ethers";
 import useMerkleTree from "../../hooks/useMerkleTree";
 import { GetDuePayment, GetShares } from "../../hooks/dapp/useStakeHoldersPool";
 
-const MintingPage = ({isWalletList, setIsWalletList, dueNFTPayment}) => {
+import hologramRect from '../../assets/images/layers/holo-rect.png';
+import hologramPad from '../../assets/images/layers/holo-pad.png';
+import hologramBorder from '../../assets/images/layers/hologram-border.png';
+
+
+const MintingPage = ({ isWalletList, setIsWalletList, dueNFTPayment }) => {
     const {
         account,
     } = useEthers();
@@ -38,7 +43,7 @@ const MintingPage = ({isWalletList, setIsWalletList, dueNFTPayment}) => {
 
     const shares = GetShares(account);
     const duePayment = GetDuePayment(account);
- 
+
     const [showModal, setShowModal] = useState(false);
 
     const callMint = (amount) =>
@@ -55,91 +60,101 @@ const MintingPage = ({isWalletList, setIsWalletList, dueNFTPayment}) => {
         });
 
     return (
-        <div className="relative z1">
+        <div className="relative z1 padding-body">
             {/*<Bubble className="absolute "/>*/}
-  
-            <Container className="glass-box relative z2">
-                <Row>
-                <h1 className="mintingPageSubTitleStyle">Humpback Whale Mint</h1>
-                </Row>
-                <Row>
-                    <Col xs={{span: 12, order:1}} lg={{span:6, order:1}} className="nftPosterCol">
-                        
-                        <NFTPoster className=""/>
-                    </Col>
-                    <Col xs={{span:12, order:2}} lg={{span:6, order:2}} className="mintingPagePositioning justify-content-center align-items-center">
-                        
-                        <br/>
-                        
-                        <p className="mintingPageParagraphStyle">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                        <br/>
-                        <Container className="containerButtons">
-                            {!dueNFTPayment?
-                                <><Row>
-                                    <Col className="d-flex justify-content-end columnPositioning1">
-                                        <Button variant="secondary" size="lg" className="oceanSixMintingPagePriceButton">Price <br /> {Number(mintPrice) / Math.pow(10, 18)} eth</Button>
-                                    </Col>
-                                    <Col className="columnPositioning2">
-                                        <Button variant="secondary" size="lg" className="oceanSixMintingPageAvailableButton">Available <br /> {Number(supply)}/22</Button>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col className="d-flex justify-content-end columnPositioning1">
-                                        <Button variant="secondary" size="lg" className="oceanSixMintingPageTitleButton">Mints per Wallet <br /> {phase == '0' ? (account ? Number(mintPerUser) + '/' + mintingLimit : mintingLimit + '/' + mintingLimit) : '∞'} </Button>
-                                    </Col>
-                                    <Col className="columnPositioning2">
-                                        <Button variant="secondary" size="lg" className="oceanSixMintingPageTitle2Button">
-                                            <div className="mint-count">
-                                                <div className="arrow-left">
-                                                    <FaChevronLeft
-                                                        size="10x"
-                                                        onClick={() => {
-                                                            setAmount(amount === 1 ? Number(mintingLimit) : amount - 1);
-                                                        } } />
-                                                </div>
 
-                                                <div className="amount">{amount}</div>
-                                                <div className="arrow-right">
-                                                    <FaChevronRight
-                                                        size="10x"
-                                                        onClick={() => {
-                                                            setAmount(amount === Number(mintingLimit) ? 1 : amount + 1);
-                                                        } } />
-                                                </div>
-                                            </div>
-                                        </Button>
-                                    </Col>
-                                </Row></>   :
-                                <Row>
-                                    <Col>
-                                        <Button variant="secondary" size="lg" className="oceanSixDuePaymentButton">Due Payement <br/> {Number(duePayment)/Math.pow(10,18)} ETH</Button>
-                                    </Col>
-                                </Row>
-                            }
-                        </Container>
+            <div className="hologram-wrap">
+                <img
+                    class="hologram-bg"
+                    src={hologramRect}
+                    alt=""
+                ></img>
+                <img
+                    class="hologram-bg-pad"
+                    src={hologramPad}
+                    alt=""
+                ></img>
 
-                        <ConnectButtonWallet
-                            dueNFTPayment={dueNFTPayment}
-                            isWalletList={isWalletList}
-                            setIsWalletList={setIsWalletList}
-                            showModalSection={() => setShowModal(true)}
-                            callMint = {callMint}
-                            amount = {amount}
-                        />
-                    </Col>
-                </Row>
-                <MintingModal
-                    show={showModal}
-                    setShow={setShowModal}
-                    mintingState={state}
-                    account={account}/>
-            </Container>
+                <Container className="hologram-content">
+
+                     
+                    <div className="hologramBorder hflex-box  justify-center alignItems-center alignContent-center">
+                        <NFTPoster className="" />
+
+                        <Col xs={{ span: 12, order: 2 }} lg={{ span: 6, order: 2 }} className="mintingPagePositioning ">
+
+                            <br />
+
+                            <p className="mintingPageParagraphStyle">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                            <br />
+                            <Container className="containerButtons">
+                                {!dueNFTPayment ?
+                                    <><Row>
+                                        <Col className="d-flex justify-content-end columnPositioning1">
+                                            <Button variant="secondary" size="lg" className="oceanSixMintingPagePriceButton">Price <br /> {Number(mintPrice) / Math.pow(10, 18)} eth</Button>
+                                        </Col>
+                                        <Col className="columnPositioning2">
+                                            <Button variant="secondary" size="lg" className="oceanSixMintingPageAvailableButton">Available <br /> {Number(supply)}/22</Button>
+                                        </Col>
+                                    </Row>
+                                        <Row>
+                                            <Col className="d-flex justify-content-end columnPositioning1">
+                                                <Button variant="secondary" size="lg" className="oceanSixMintingPageTitleButton">Mints per Wallet <br /> {phase == '0' ? (account ? Number(mintPerUser) + '/' + mintingLimit : mintingLimit + '/' + mintingLimit) : '∞'} </Button>
+                                            </Col>
+                                            <Col className="columnPositioning2">
+                                                <Button variant="secondary" size="lg" className="oceanSixMintingPageTitle2Button">
+                                                    <div className="mint-count">
+                                                        <div className="arrow-left">
+                                                            <FaChevronLeft
+                                                                size="10x"
+                                                                onClick={() => {
+                                                                    setAmount(amount === 1 ? Number(mintingLimit) : amount - 1);
+                                                                }} />
+                                                        </div>
+
+                                                        <div className="amount">{amount}</div>
+                                                        <div className="arrow-right">
+                                                            <FaChevronRight
+                                                                size="10x"
+                                                                onClick={() => {
+                                                                    setAmount(amount === Number(mintingLimit) ? 1 : amount + 1);
+                                                                }} />
+                                                        </div>
+                                                    </div>
+                                                </Button>
+                                            </Col>
+                                        </Row></> :
+                                    <Row>
+                                        <Col>
+                                            <Button variant="secondary" size="lg" className="oceanSixDuePaymentButton">Due Payement <br /> {Number(duePayment) / Math.pow(10, 18)} ETH</Button>
+                                        </Col>
+                                    </Row>
+                                }
+                            </Container>
+
+                            <ConnectButtonWallet
+                                dueNFTPayment={dueNFTPayment}
+                                isWalletList={isWalletList}
+                                setIsWalletList={setIsWalletList}
+                                showModalSection={() => setShowModal(true)}
+                                callMint={callMint}
+                                amount={amount}
+                            />
+                        </Col>
+                    </div>
+                    <MintingModal
+                        show={showModal}
+                        setShow={setShowModal}
+                        mintingState={state}
+                        account={account} />
+                </Container>
+            </div>
             <Footer />
         </div>
     );
