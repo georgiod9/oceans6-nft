@@ -1,0 +1,464 @@
+
+.mintingPageParagraphStyle{
+  color: white;
+  font-family: 'Karla', sans-serif; 
+  text-align: center;
+  font-size: 1.2vw;
+}
+
+.mintingPageTitleStyle{
+  color: white;
+  font-family: 'Karla', sans-serif; 
+  text-align: center;
+}
+
+.mintingPageSubTitleStyle{
+  color: white;
+  font-family: 'Quattrocento Sans', sans-serif;
+  text-align: center;
+}
+
+.nftPosterCol{
+  
+  margin: auto auto;
+
+  @media(min-width: 992px) and (max-width: 1199px){
+    margin-top: 10rem;
+  }
+  //width: 100%;
+}
+
+
+.mintingPagePositioning{
+  //margin: 100px 150px 0px 50px;
+  padding-inline: 5%;
+
+  @media (max-width: 768px ){
+    padding-inline: 10%;
+
+  }
+  padding-block:32px ;
+}
+
+.flex-text-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  
+}
+
+.oceanSixMintingPagePriceButton{
+  width: 100%;
+  height: 50px;
+  margin-bottom: 5px;
+  background: rgba(195, 202, 206, 0);
+  color: white;
+  border: none;
+  border-radius: 10px 0px 0px 0px;
+  font-family: 'Karla', sans-serif; 
+}
+
+.oceanSixMintingPageAvailableButton{
+  width: 100%;
+  height: 50px;
+  background: rgba(195, 202, 206, 0);
+  color: white;
+  border: none;
+  border-radius: 0px 10px 0px 0px;
+  font-family: 'Karla', sans-serif; 
+}
+
+.oceanSixMintingPageTitleButton{
+  width: 100%;
+  height: 50px;
+  background: rgba(195, 202, 206, 0);
+  color: white;
+  border: none;
+  border-radius: 0px 0px 0px 10px;
+  font-family: 'Karla', sans-serif; 
+}
+
+.oceanSixMintingPageTitle2Button{
+  width: 100%;
+  height: 50px;
+  color: white;
+  background: rgba(195, 202, 206, 0);
+  border: none;
+  border-radius: 0px 0px 10px 0px;
+  font-family: 'Karla', sans-serif; 
+}
+
+.oceanSixMintingPagePriceButton:hover{
+  background: rgba(195, 202, 206, 0.2);
+}
+
+.oceanSixMintingPageAvailableButton:hover{
+  background: rgba(195, 202, 206, 0.2);
+}
+
+.oceanSixMintingPageTitleButton:hover{
+  background: rgba(195, 202, 206, 0.2);
+}
+
+.oceanSixMintingPageTitle2Button:hover{
+  background: rgba(195, 202, 206, 0.2);
+}
+
+.columnPositioning2{
+  padding-left: 0px;
+}
+
+.columnPositioning1{
+  padding-right: 5px;
+}
+
+.containerButtons{
+  padding: 0px;
+  z-index: 100;
+}
+.connectWalletBtn{
+  width: 100%;
+  margin-top: 40px;
+  font-family: 'Karla', sans-serif; 
+}
+
+.footerContainer{
+  margin: 80px 0px 0px 0px;
+}
+
+.positioning{
+  margin-top: 70px;
+  align-content: center;
+}
+
+.mint-count {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  .amount {
+    padding: 5px 15px;
+    font-family: 'Karla', sans-serif; 
+    font-size: 22px;
+    // color: #161616;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 50px;
+    user-select: none;
+    // background-image: linear-gradient(211deg, #834f16, #d6b99b 51%, #c09b76);
+  }
+
+  .arrow-left {
+    width: 40px;
+    background: transparent;
+    height: 40px;
+    font-size: 10px;
+    cursor: pointer;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    color: rgb(255, 255, 255);
+    padding: 0 10px;
+    svg {
+      width: 16px;
+    }
+  }
+
+  .arrow-right {
+    width: 40px;
+    background: transparent;
+    height: 40px;
+    font-size: 10px;
+    cursor: pointer;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: rgb(255, 255, 255);
+    padding: 0 10px;
+    svg {
+      width: 16px;
+    }
+  }
+}
+
+.oceanSixDuePaymentButton{
+  width: 100%;
+  height: 50px;
+  background: rgba(195, 202, 206, 0);
+  border: none;
+  font-family: 'Karla', sans-serif; 
+}
+.oceanSixDuePaymentButton:hover{
+  background: rgba(195, 202, 206, 0.2); 
+}
+
+.glass {
+  background-image: url("../../assets/images/card-01.png");
+  background-size: auto fit-content;
+  background-position: center;
+  margin: auto;
+  padding: 10vh 10vw;
+  background-repeat: no-repeat;
+  width: fit-content;
+}
+
+.glass-box {
+  background-color: rgba(243, 242, 242, 0.959);
+  border: 1px solid white;
+  border-radius: 30px;
+  backdrop-filter: blur(20px);
+
+  width: max-content;
+  height: max-content;
+  padding: 20px 20px;
+  margin-top: 30px;
+}
+
+.zindex-1 {
+  z-index: 999;
+}
+
+.glass_card {
+  z-index: -1;
+  display: absolute;
+  top: 0;
+}
+
+
+.cont {
+  margin: auto auto;
+}
+
+.grid-gap {
+  grid-gap: 20px;
+}
+
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+
+.bubble-s {
+  width: 50px;
+  z-index: -10;
+}
+
+.z1 {
+  z-index: 1;
+}
+
+.z2 {
+  z-index: 2;
+}
+
+.z3 {
+  z-index: 3;
+  top: 50px;
+}
+
+
+
+.padding-body {
+  padding-top: 0px;
+}
+
+.hologram-wrap {
+  overflow: hidden;
+  padding: 20px 0px;
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+
+.hologram-bg {
+  opacity: 0.286;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hologram-bg-pad {
+  opacity: 0.95;
+  position: absolute;
+  left: 0;
+  top: 80px;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+.border-frame {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+.poster-positioning {
+  padding: 0px 0px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+
+.hologramBorder {
+  background-image: url('../../assets/images/layers/hologram-border.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hologram-content {
+  position: relative;
+  padding-bottom: 5vw;
+}
+
+
+
+.mint-text-positioning {
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  top: 0;
+  right: 20px;
+}
+
+.gap-row {
+  gap: 0px 0vw;
+}
+
+.hflex-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0 0;
+  
+}
+
+.vflex-box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: auto auto;
+  
+}
+
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-spaceevenly {
+  justify-content: space-evenly;
+}
+
+.alignItems-center {
+  align-items: center;
+}
+
+.alignContent-center {
+  align-content: center;
+}
+
+
+
+.hologram-rect {
+  width: 100%;
+  height: max-content;
+  margin: auto auto;
+  opacity: 0.3;
+  position: relative;
+  
+}
+
+.hologram-pad {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 5%;
+}
+
+.hologram-border {
+  opacity: 0.99;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  
+  
+}
+
+.border-image-sizing {
+  width: 100%;
+}
+
+.container_mint {
+  position: relative;
+}
+
+.nft-poster {
+  position: absolute;
+  top: 25%;
+  left: 22%;
+  height: auto;
+  width: auto;
+}
+
+
+.relative {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+.mint-panel {
+  position: absolute;
+  right: 25%;
+  top: 25%;
+  width: 30vw;
+  padding-top: 40px;
+}
+
+
+.price_container {
+  position: relative;
+}
+
+.price_bar {
+  position: absolute;
+  left: 0%;
+}
+
+.priceBarSizing {
+  width: 35vw;
+  height: 100%;
+  padding-right: 20px;
+}
+
+.mints_per_wallet {
+  position: absolute;
+  top: 2vw;
+  left: 30%;
+}
+
+.price_box {
+  position: absolute;
+  top: 2vw;
+  right: 5%;
+}
+

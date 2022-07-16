@@ -1,5 +1,5 @@
 import NFTExample from "../../assets/images/NFTExample.png";
-import NFTExampleFramed from "../../assets/images/layers/nft.png";
+import NFTExampleFramed from "../../assets/images/layers/nft-centered.png";
 
 import "./styles.scss";
 
