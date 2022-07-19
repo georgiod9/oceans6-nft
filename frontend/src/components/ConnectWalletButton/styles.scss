@@ -3,11 +3,34 @@
     margin-top: 40px;
     font-family: 'Karla', sans-serif;  
     margin-left: 8rem;
-
+    background-color: rgba(255, 255, 255, 0);
+    
     @media(max-width: 1200px){
         margin-left: 6rem;
     }
     @media(max-width: 991px){
         margin-left: 10rem;
     }
+}
+
+.buttonContainer {
+    width: 200px;
+    height: 30px;
+    background-color: white;
+}
+
+.connectWalletBtnBg {
+    cursor: pointer;
+}
+
+.connectWalletButtonSizing {
+    width: 80%;
+    transition: 0.5s all;
+}
+
+.connectWalletButtonSizing:hover {
+    transform: scale(1.1);
+    height: auto;
+    transition: 0.8s all;
+    transform-origin: center;
 }

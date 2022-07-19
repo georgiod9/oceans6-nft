@@ -6,6 +6,8 @@ import {TotalSupply} from "../../hooks/dapp/useOceanSix721"
 import { useStakeHoldersPoolMethod } from "../../hooks/dapp/useStakeHoldersPool";
 import "./styles.scss"
 
+import connectWalletButton from '../../assets/images/layers/button.png';
+
 const ConnectButtonWallet = ({showModalSection, callMint, amount, setIsWalletList, dueNFTPayment}) => {
   const supply = TotalSupply();
 
@@ -23,7 +25,7 @@ const ConnectButtonWallet = ({showModalSection, callMint, amount, setIsWalletLis
     dueNFTPayment ? (
         <>
           <Button
-              variant="dark"
+              variant="light"
               className="connectWalletBtn"
               prefixicon="Wallet"
               padding="5px 5px"
@@ -42,7 +44,7 @@ const ConnectButtonWallet = ({showModalSection, callMint, amount, setIsWalletLis
         supply < 22222 ? (
           <>
             <Button
-                variant="dark"
+                variant="light"
                 className="connectWalletBtn"
                 prefixicon="Wallet"
                 padding="5px 5px"
@@ -56,7 +58,7 @@ const ConnectButtonWallet = ({showModalSection, callMint, amount, setIsWalletLis
           </>
         ) : (
             <Button
-                variant="dark"
+                variant="light"
                 disabled={true}
                 className="connectWalletBtn"
                 prefixicon="Wallet"
@@ -68,15 +70,14 @@ const ConnectButtonWallet = ({showModalSection, callMint, amount, setIsWalletLis
       ) : null
     )
   ) : (
-    <div>
-      <Button
-        variant="dark"
-        className="connectWalletBtn"
+    <div >
+      
+      <div
+        className="connectWalletBtnBg"
         onClick={handleConnectWallet}
-        prefixicon="Wallet"
-        padding="5px 5px"
-      >connect wallet <AiOutlineArrowRight /> 
-      </Button>
+      >
+        <img src={connectWalletButton} className="connectWalletButtonSizing"></img>
+      </div>
     </div>
   );
 };

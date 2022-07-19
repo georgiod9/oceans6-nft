@@ -62,16 +62,19 @@ const MintingPage = ({ isWalletList, setIsWalletList, dueNFTPayment }) => {
     return (
         <div className="main-container">
             <div className="mint-container">
-                <div className="mint-container-bg"/>
-                
+                <div className="mint-container-bg"></div>
 
                 <div className="mint-border">
                     <div className="nftPosterPositioning">
                         <NFTPoster />
+                        <div className="nftPosterTitlePositioning">
+                            <Button variant="secondary" size="lg" className="oceanSixPosterTitleButton">Oceans6 Whale Mint</Button>
+                        </div>
                     </div>
+
                     <div className="textPositioning">
-                        <p className="mintTextStyle">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        <p className="mintTextStyle textRectHologram">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -81,19 +84,63 @@ const MintingPage = ({ isWalletList, setIsWalletList, dueNFTPayment }) => {
 
                     <div className="priceBar">
                         <img className="priceBarSizing" src={priceBar}></img>
-                        <p className="mintsLabel"> 3 mints/wallet left </p>
-                        <p className="priceLabel"> 1 ETH/mint </p>
+                        <div className="mintsLabel">
+                            <Button variant="secondary" size="lg" className="oceanSixMintingPageTitleButton"> Wallet:  {phase == '0' ? (account ? Number(mintPerUser) + '/' + mintingLimit : mintingLimit + '/' + mintingLimit) : '∞'} </Button>
+                        </div>
+                        <div className="priceLabel">
+                            <Button variant="secondary" size="lg" className="oceanSixMintingPagePriceButton">{Number(mintPrice) / Math.pow(10, 18)} eth</Button>
+                        </div>
+                        <div className="remainingLabel">
+                            <Button variant="secondary" size="lg" className="oceanSixMintingPageAvailableButton">Available <br /> {Number(supply)}/22</Button>
+                        </div>
+                        <div className="mintCountSelector">
+                            <Button variant="secondary" size="lg" className="oceanSixMintingPageTitle2Button">
+                                <div className="mint-count">
+                                    <div className="arrow-left">
+                                        <FaChevronLeft
+                                            size="10x"
+                                            onClick={() => {
+                                                setAmount(amount === 1 ? Number(mintingLimit) : amount - 1);
+                                            }} />
+                                    </div>
+
+                                    <div className="amount">{amount}</div>
+                                    <div className="arrow-right">
+                                        <FaChevronRight
+                                            size="10x"
+                                            onClick={() => {
+                                                setAmount(amount === Number(mintingLimit) ? 1 : amount + 1);
+                                            }} />
+                                    </div>
+                                </div>
+                            </Button>
+                        </div>
+
+
 
                     </div>
+
+                    <div className="connectWallet">
+                        <ConnectButtonWallet
+                            dueNFTPayment={dueNFTPayment}
+                            isWalletList={isWalletList}
+                            setIsWalletList={setIsWalletList}
+                            showModalSection={() => setShowModal(true)}
+                            callMint={callMint}
+                            amount={amount}
+                        />
+                    </div>
+
                 </div>
 
-                
+
+
             </div>
 
             <div className="mint-container-bottom">
-                    
+
             </div>
-            
+
         </div>
     );
 };

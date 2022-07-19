@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'Gotham';
+  src: url('../../assets/fonts/Gotham-Bold.otf') format("truetype");
+}
 
 .mintingPageParagraphStyle{
     color: white;
@@ -50,13 +54,15 @@
   
   .oceanSixMintingPagePriceButton{
     width: 100%;
-    height: 50px;
+    height: max-content;
     margin-bottom: 5px;
     background: rgba(195, 202, 206, 0);
     color: white;
     border: none;
-    border-radius: 10px 0px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
     font-family: 'Karla', sans-serif; 
+    font-size: 1.11vw;
+
   }
   
   .oceanSixMintingPageAvailableButton{
@@ -71,21 +77,22 @@
   
   .oceanSixMintingPageTitleButton{
     width: 100%;
-    height: 50px;
+    height: max-content;
     background: rgba(195, 202, 206, 0);
     color: white;
     border: none;
-    border-radius: 0px 0px 0px 10px;
+    border-radius: 0px 0px 0px 0px;
     font-family: 'Karla', sans-serif; 
+    font-size: 1.1vw;
   }
   
   .oceanSixMintingPageTitle2Button{
-    width: 100%;
-    height: 50px;
+    width: max-content;
+    height: max-content;
     color: white;
     background: rgba(195, 202, 206, 0);
     border: none;
-    border-radius: 0px 0px 10px 0px;
+    border-radius: 0px 0px 0px 0px;
     font-family: 'Karla', sans-serif; 
   }
 
@@ -121,7 +128,9 @@
     width: 100%;
     margin-top: 40px;
     font-family: 'Karla', sans-serif; 
+    
   }
+
   
   .footerContainer{
     margin: 80px 0px 0px 0px;
@@ -138,7 +147,7 @@
     justify-content: center;
     align-items: center;
     .amount {
-      padding: 5px 15px;
+      padding: 0px 15px;
       font-family: 'Karla', sans-serif; 
       font-size: 22px;
       // color: #161616;
@@ -478,11 +487,13 @@
     background-image: url('../../assets/images/layers/holo-rect-new.png');
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.35;
 
-    height: 105vh;
+    height: 100vh;
     width: auto;
     margin: auto auto;
+    opacity: 1;
+    mix-blend-mode: overlay;
+
   }
 
   .mint-container-bottom {
@@ -500,26 +511,51 @@
   .mint-border {
     position: absolute;
     top: 0%;
-    left: 17.5%;
+    left: 17%;
     width: 65vw;
     height: 60vw;
 
     background-image: url('../../assets/images/layers/border-new.png');
-    background-position: center;
+    background-position: 0 20%;
     background-size: contain;
     background-repeat: no-repeat;
+
   }
 
   .nftPosterPositioning {
     position: absolute;
-    top: 28%;
+    top: 15%;
     left: 7%;
+  }
+
+  .nftPosterTitlePositioning {
+    position: absolute;
+    top: 7%;
+    left: 20%;
+  }
+
+  .oceanSixPosterTitleButton {
+    width: max-content;
+    height: max-content;
+    margin-bottom: 5px;
+    background: rgba(195, 202, 206, 0);
+    color: black;
+    border: none;
+    border-radius: 0px 0px 0px 0px;
+    font-family: 'Karla-Bold', sans-serif; 
+    font-size: 1.35vw;
   }
 
   .textPositioning {
     position: absolute;
-    top: 30%;
+    top: 18%;
     right: 15%;
+  }
+
+  .textRectHologram {
+    background-image: url('../../assets/images/layers/text-rect.png');
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .mintTextStyle {
@@ -531,7 +567,7 @@
 
   .priceBar {
     position: absolute;
-    top: 60%;
+    top: 45%;
     right: 0%;
     width: 60%;
   }
@@ -542,19 +578,55 @@
 
   .priceLabel {
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 60%;
     color: white;
     font-size: 1vw;
   }
 
+
   .mintsLabel {
     position: absolute;
-    top: 40%;
-    left: 20%;
+    top: 35%;
+    left: 25%;
     color: white;
     font-size: 1vw;
 
+  }
+
+  .remainingLabel {
+    position: absolute;
+    top: 70%;
+    left: 2%;
+    color: white;
+    font-size: 1vw;
+  }
+
+  .oceanSixMintingPageRemainingButton {
+    width: 100%;
+    height: max-content;
+    margin-bottom: 5px;
+    background: rgba(195, 202, 206, 0);
+    color: white;
+    border: none;
+    border-radius: 0px 0px 0px 0px;
+    font-family: 'Karla', sans-serif; 
+    font-size: 1.11vw;
+  }
+
+  .mintCountSelector {
+    position: absolute;
+    top: 75%;
+    left: 22%;
+    color: white;
+    font-size: 1vw;
+  }
+
+  
+  .connectWallet {
+    position: absolute;
+    bottom: 28%;
+    left: 41%;
   }
 
 
